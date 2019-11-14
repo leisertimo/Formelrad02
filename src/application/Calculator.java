@@ -55,7 +55,11 @@ public class Calculator {
 	
 	public double iAusPundU() {
 		return strom = leistung / spannung;
-	} 
+	}
+	
+	public double iAusUundR() {
+		return strom = spannung / widerstand;
+	}
 	
 	
 }
