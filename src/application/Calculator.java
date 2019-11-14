@@ -50,7 +50,12 @@ public class Calculator {
 	}
 	
 	public double iAusPundR() {
-		return strom = Math.sqrt(leistung / spannung);
+		return strom = Math.sqrt(leistung / widerstand);
 	} 
+	
+	public double iAusPundU() {
+		return strom = leistung / spannung;
+	} 
+	
 	
 }
