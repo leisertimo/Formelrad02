@@ -47,17 +47,28 @@ public class Calculator {
 		/* Hier auf Grund der vorhanden Werte entscheiden
 		 * welche Methode unten aufgerufen werden muss.
 		 */
+		if(strom == 0 && leistung != 0 && widerstand != 0) {
+			strom = iAusPundR(leistung, widerstand);
+		}
+		if(strom == 0 && leistung != 0 && spannung != 0) {
+			strom = iAusPundU(leistung, spannung);
+		}
+		if(strom == 0 && spannung != 0 && widerstand != 0) {
+			strom = iAusUundR(spannung, widerstand);
+		}
+		
+		
 	}
 	
-	public double iAusPundR() {
+	public double iAusPundR(double leistung, double widerstand) {
 		return strom = Math.sqrt(leistung / widerstand);
 	} 
 	
-	public double iAusPundU() {
+	public double iAusPundU(double leistung, double spannung) {
 		return strom = leistung / spannung;
 	}
 	
-	public double iAusUundR() {
+	public double iAusUundR(double spannung, double widerstand) {
 		return strom = spannung / widerstand;
 	}
 	
